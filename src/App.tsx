@@ -6,7 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppLayout } from "./components/layout/AppLayout";
 import Dashboard from "./pages/Dashboard";
 import Customers from "./pages/Customers";
+import Events from "./pages/Events";
+import Payments from "./pages/Payments";
 import AITools from "./pages/AITools";
+import Messaging from "./pages/Messaging";
+import FileManager from "./pages/FileManager";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,12 +26,12 @@ const App = () => (
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="customers" element={<Customers />} />
-            <Route path="events" element={<div className="p-8 text-center text-muted-foreground">Events & Bookings - Coming Soon</div>} />
-            <Route path="payments" element={<div className="p-8 text-center text-muted-foreground">Payments & Credits - Coming Soon</div>} />
+            <Route path="events" element={<Events />} />
+            <Route path="payments" element={<Payments />} />
             <Route path="ai-tools" element={<AITools />} />
-            <Route path="messaging" element={<div className="p-8 text-center text-muted-foreground">WhatsApp Messaging - Coming Soon</div>} />
-            <Route path="files" element={<div className="p-8 text-center text-muted-foreground">File Manager - Coming Soon</div>} />
-            <Route path="settings" element={<div className="p-8 text-center text-muted-foreground">Settings - Coming Soon</div>} />
+            <Route path="messaging" element={<Messaging />} />
+            <Route path="files" element={<FileManager />} />
+            <Route path="settings" element={<Settings />} />
             <Route path="backup" element={<div className="p-8 text-center text-muted-foreground">Backup & Sync - Coming Soon</div>} />
             <Route path="analytics" element={<div className="p-8 text-center text-muted-foreground">Analytics - Coming Soon</div>} />
           </Route>
